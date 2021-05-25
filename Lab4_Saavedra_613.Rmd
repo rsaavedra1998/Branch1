@@ -9,3 +9,10 @@ output: word_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r}
+library(ggplot2)
+library(dplyr)
+diamonds%>%
+  ggplot(aes(x=carat, y=price))+geom_point()
+```
+
