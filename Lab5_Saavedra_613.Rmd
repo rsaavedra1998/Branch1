@@ -1,0 +1,22 @@
+---
+title: "Lab 5"
+author: "Rafael Saavedra"
+date: "5/26/2021"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# 1. Produce an Rmarkdown file that contains the code required to generate the side by side boxplots.
+```{r}
+data("mpg")
+
+mpg%>%
+  ggplot(aes(x=trans, y=cty))+geom_boxplot(stat='boxplot', fill='red')
+
+
+```
+
